@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pirate Log</title>
+
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
+    <script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css" />
+</head>
+
+<body>
+    <ion-app>
+
+        <!-- Hidden Menu Bar -->
+        <ion-menu side="start" content-id="main-content">
+            <ion-header>
+                <ion-toolbar color="warning">
+                    <ion-title> Menu </ion-title>
+                </ion-toolbar>
+            </ion-header>
+
+            <!-- List of Pages to go to -->
+            <ion-content>
+                <ion-list>
+                    <ion-item>
+                        <ion-label><a href="index.html"> Home</a></ion-label>
+                    </ion-item>
+
+                    <ion-item>
+                        <ion-label><a href="treasureMap.html"> Treasure Map</a></ion-label>
+                    </ion-item>
+
+                    <ion-item>
+                        <ion-label><a href="#">Compass</a></ion-label>
+                    </ion-item>
+
+                    <ion-item>
+                        <ion-label><a href="#">Pirate Essentials</a></ion-label>
+                    </ion-item>
+
+                    <ion-item>
+                        <ion-label><a href="weather.html">Check the Winds</a></ion-label>
+                    </ion-item>
+                </ion-list>
+            </ion-content>
+        </ion-menu>
+
+        <ion-content class="ion-page" id="main-content">
+            <!-- Page Content -->
+
+            <!-- Header and Manu Button -->
+            <ion-header>
+                <ion-toolbar color="warning">
+                    <ion-buttons slot="start">
+                        <ion-menu-button></ion-menu-button>
+                    </ion-buttons>
+                    <ion-title> Pirate Essentials </ion-title>
+                </ion-toolbar>
+            </ion-header>
+
+            <!-- Grid for better layout and more control over the alignment -->
+            <!-- Header -->
+            <ion-grid>
+                <ion-row>
+                    <ion-col>
+                        <ion-title class="ion-text-center">
+                            Check and update your essentials!
+                        </ion-title>
+                    </ion-col>
+                </ion-row>
+            </ion-grid>
+
+            <!-- Items on card and a grid -->
+            <ion-card>
+                <ion-card-content>
+                    <!-- List of items -->
+                    <ion-list>
+                        <ion-grid>
+                            <!-- Name of an Item and Amount -->
+                            <ion-row>
+                                <ion-col size="8">
+                                    <ion-item id="item-rum">Bottles of Rum: </ion-item>
+                                </ion-col>
+
+                                <ion-col>
+                                    <ion-label position="floating">Amount</ion-label>
+                                    <ion-input type="number" id="rum-amount">
+                                        </ion-item>
+                                </ion-col>
+                            </ion-row>
+
+                            <!-- Name of an Item and Amount -->
+                            <ion-row>
+                                <ion-col size="8">
+                                    <ion-item id="item-beer">Kegs of Beer:</ion-item>
+                                </ion-col>
+
+                                <ion-col>
+                                    <ion-label position="floating">Amount</ion-label>
+                                    <ion-input type="number" id="beer-amount"></ion-inpu>
+                                </ion-col>
+                            </ion-row>
+
+                        </ion-grid>
+                    </ion-list>
+
+                    <!-- Adding a New Item and Amount -->
+                    <ion-grid>
+                        <ion-row>
+                            <ion-col size="8">
+                                <ion-label position="floating"> Add a new item </ion-label>
+                                <ion-input type="string" id="lbl-item-add"></ion-input>
+                            </ion-col>
+
+                            <ion-col>
+                                <ion-label position="floating">Amount</ion-label>
+                                <ion-input type="number" id="beer-amount">
+                                    </ion-inpu>
+                            </ion-col>
+                        </ion-row>
+
+                        <ion-button expand="block" id="btn-add-item" color="warning">
+                            Add Item
+                        </ion-button>
+                    </ion-grid>
+
+                </ion-card-content>
+            </ion-card>
+        </ion-content>
+    </ion-app>
+
+    <script>
+        async function openMenu() {
+            await menuController.open();
+        }
+    </script>
+
+</body>
+</html>
